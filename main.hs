@@ -15,7 +15,7 @@ chooseAPlanet = do
   putStrLn "Shall I randomly choose a planet for you to visit? (Y or N)"
   choice <- getLine
   if choice == "Y" then
-    randomPlanet
+    travelTorandomPlanet
   else if choice == "N" then
     do
       putStrLn "Name the planet you would like to visit."
@@ -24,8 +24,8 @@ chooseAPlanet = do
   else
     putStrLn "Sorry, I didn't get that."
 
-randomPlanet :: IO()
-randomPlanet = do
+travelTorandomPlanet :: IO()
+travelTorandomPlanet = do
   putStrLn "Going to fake planet"
 
 travelToPlanet :: String -> IO()
