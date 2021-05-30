@@ -21,7 +21,7 @@ travelToPlanet planet = do
 main = do
   welcomeMessage
   greetPerson
-  putStrLn "Shall I randomly  choose a planet for you to visit? (Y or N)"
+  putStrLn "Shall I randomly choose a planet for you to visit? (Y or N)"
   choice <- getLine
   if choice == "Y" then
     randomPlanet
