@@ -10,17 +10,8 @@ greetPerson = do
   putStrLn ("Nice to meet you, " ++ name ++ ". My name is Eliza, I'm an old friend of Alexa.")
   putStrLn "Let's go on an adventure!"
 
-randomPlanet :: IO()
-randomPlanet = do
-  putStrLn "Going to fake planet"
-
-travelToPlanet :: String -> IO()
-travelToPlanet planet = do
-  putStrLn ("Traveling to " ++ planet ++ ". It is nice here.")
-
-main = do
-  welcomeMessage
-  greetPerson
+chooseAPlanet :: IO()
+chooseAPlanet = do
   putStrLn "Shall I randomly choose a planet for you to visit? (Y or N)"
   choice <- getLine
   if choice == "Y" then
@@ -32,4 +23,17 @@ main = do
       travelToPlanet planet
   else
     putStrLn "Sorry, I didn't get that."
+
+randomPlanet :: IO()
+randomPlanet = do
+  putStrLn "Going to fake planet"
+
+travelToPlanet :: String -> IO()
+travelToPlanet planet = do
+  putStrLn ("Traveling to " ++ planet ++ ". It is nice here.")
+
+main = do
+  welcomeMessage
+  greetPerson
+  chooseAPlanet
 
