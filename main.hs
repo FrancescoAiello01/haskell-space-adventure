@@ -3,8 +3,16 @@ welcomeMessage = do
   putStrLn "Welcome to the Solar System!"
   putStrLn "There are 9 planets to explore."
 
+greetPerson :: IO()
+greetPerson = do
+  putStrLn "What is your name?"
+  name <- getLine
+  putStrLn ("Nice to meet you, " ++ name ++ ". My name is Eliza, I'm an old friend of Alexa.")
+  putStrLn "Let's go on an adventure!"
+
 main = do
   welcomeMessage
+  greetPerson
   putStrLn "Shall I randomly  choose a planet for you to visit? (Y or N)"
   choice <- getLine
   if choice == "Y" then
