@@ -1,2 +1,2 @@
-ghc --make main
-./main
+ghc --make Main
+./Main
