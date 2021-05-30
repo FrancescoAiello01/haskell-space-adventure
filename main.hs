@@ -10,13 +10,17 @@ greetPerson = do
   putStrLn ("Nice to meet you, " ++ name ++ ". My name is Eliza, I'm an old friend of Alexa.")
   putStrLn "Let's go on an adventure!"
 
+randomPlanet :: IO()
+randomPlanet = do
+  putStrLn "Going to fake planet"
+
 main = do
   welcomeMessage
   greetPerson
   putStrLn "Shall I randomly  choose a planet for you to visit? (Y or N)"
   choice <- getLine
   if choice == "Y" then
-    putStrLn "Going to fake planet"
+    randomPlanet
   else if choice == "N" then
     do
       putStrLn "Name the planet you would like to visit."
