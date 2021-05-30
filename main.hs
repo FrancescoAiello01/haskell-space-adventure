@@ -14,6 +14,10 @@ randomPlanet :: IO()
 randomPlanet = do
   putStrLn "Going to fake planet"
 
+travelToPlanet :: String -> IO()
+travelToPlanet planet = do
+  putStrLn ("Traveling to " ++ planet ++ ". It is nice here.")
+
 main = do
   welcomeMessage
   greetPerson
@@ -25,7 +29,7 @@ main = do
     do
       putStrLn "Name the planet you would like to visit."
       planet <- getLine
-      putStrLn ("Traveling to " ++ planet ++ ". It is nice here.")
+      travelToPlanet planet
   else
     putStrLn "Sorry, I didn't get that."
 
