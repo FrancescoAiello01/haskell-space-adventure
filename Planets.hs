@@ -30,9 +30,21 @@ chooseAPlanet = do
   else
     putStrLn "Sorry, I didn't get that."
 
+
+rng :: Int -> Int
+rng upper
+ | upper<=4   = upper
+ | otherwise  = 4
+
+randomPlanet :: String
+randomPlanet =
+  ["mercury", "venus", "earth", "mars",
+  "jupiter", "saturn", "uranus", "neptune",
+  "pluto"]!!(rng 9)
+
 travelTorandomPlanet :: IO()
 travelTorandomPlanet = do
-  putStrLn "Going to fake planet"
+  travelToPlanet randomPlanet
 
 lookupPlanet :: String -> String
 lookupPlanet name =
