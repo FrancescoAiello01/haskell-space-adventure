@@ -1,5 +1,6 @@
 module Main where
 import qualified Planets
+import qualified JsonParser
 
 welcomeMessage :: IO()
 welcomeMessage = do
@@ -13,7 +14,9 @@ greetPerson = do
   putStrLn ("Nice to meet you, " ++ name ++ ". My name is Eliza, I'm an old friend of Alexa.")
   putStrLn "Let's go on an adventure!"
 
+
 main = do
+  JsonParser.getData
   welcomeMessage
   greetPerson
   Planets.chooseAPlanet
