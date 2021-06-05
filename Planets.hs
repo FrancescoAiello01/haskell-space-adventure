@@ -28,7 +28,9 @@ chooseAPlanet = do
       planet <- getLine
       travelToPlanet planet
   else
-    putStrLn "Sorry, I didn't get that."
+    do
+      putStrLn "Sorry, I didn't get that."
+      chooseAPlanet
 
 
 rng :: Int -> Int
