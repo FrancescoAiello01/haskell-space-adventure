@@ -48,8 +48,10 @@ getData = do
   case d of
     Left err -> putStrLn err
     Right ps -> do
-      mbPrint $ mbPlanetName $ find (("Pluto" ==) . planetName) ps
-      mbPrint $ mbPlanetDescription $ find (("Pluto" ==) . planetName) ps
+      putStrLn ""
+      -- Uncomment these to test finding planets in the json
+      -- mbPrint $ mbPlanetName $ find (("Pluto" ==) . planetName) ps
+      -- mbPrint $ mbPlanetDescription $ find (("Pluto" ==) . planetName) ps
 
 
 mbPrint
